@@ -1,0 +1,78 @@
+function generateCertificate(name, ename, date, location) {
+  // Create the certificate container
+  var certificate = document.createElement('div');
+  certificate.className = 'certificate';
+  
+  // Create the certificate content container
+  var certificateContent = document.createElement('div');
+  certificateContent.className = 'certificate-content';
+  
+  // Create the title element
+  var title = document.createElement('h1');
+  title.className = 'certificate-title';
+  title.innerText = 'Certificate of Achievement';
+  
+  // Create the "This certificate is presented to" details element
+  var details1 = document.createElement('p');
+  details1.className = 'certificate-details';
+  details1.innerText = 'This certificate is presented to';
+  
+  // Create the name element
+  var nameElement = document.createElement('h2');
+  nameElement.className = 'certificate-name';
+  nameElement.innerText = name;
+  
+  // Create the "For successfully meeting the target and raising funds in" details element
+  var details2 = document.createElement('p');
+  details2.className = 'certificate-details';
+  details2.innerText = 'For successfully meeting the target and raising funds in';
+  
+  // Create the ename element
+  var enameElement = document.createElement('p');
+  enameElement.className = 'certificate-details';
+  enameElement.innerText = ename;
+  
+  // Create the date element
+  var dateElement = document.createElement('p');
+  dateElement.className = 'certificate-details';
+  dateElement.innerText = 'Date: ' + date;
+  
+  // Create the location element
+  var locationElement = document.createElement('p');
+  locationElement.className = 'certificate-details';
+  locationElement.innerText = 'Location: ' + location;
+  
+  // Create the signature element
+  var signature = document.createElement('p');
+  signature.className = 'certificate-signature';
+  signature.innerText = 'Authorized Signature';
+  
+  // Create the issuer element
+  var issuer = document.createElement('p');
+  issuer.className = 'certificate-issuer';
+  issuer.innerText = 'Issued by MRPU Foundation';
+  
+  // Append all elements to their respective containers
+  certificateContent.appendChild(title);
+  certificateContent.appendChild(details1);
+  certificateContent.appendChild(nameElement);
+  certificateContent.appendChild(details2);
+  certificateContent.appendChild(enameElement);
+  certificateContent.appendChild(dateElement);
+  certificateContent.appendChild(locationElement);
+  certificateContent.appendChild(signature);
+  certificateContent.appendChild(issuer);
+  
+  certificate.appendChild(certificateContent);
+  
+  return certificate;
+}
+
+// Example usage:
+var name = 'John Doe';
+var ename = 'Event Name';
+var date = 'June 11, 2023';
+var location = 'New York';
+
+var certificateElement = generateCertificate(name, ename, date, location);
+document.body.appendChild(certificateElement);
