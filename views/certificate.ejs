@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS styles for the certificate */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .certificate {
+      width: 800px;
+      height: 600px;
+      margin: 50px auto;
+      background-color: #f2f2f2;
+      border: 2px solid #333;
+      position: relative;
+      text-align: center;
+    }
+    
+    .certificate-content {
+      margin-top: 100px;
+    }
+    
+    .certificate-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .certificate-details {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .certificate-name {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    
+    .certificate-signature {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .certificate-issuer {
+      font-size: 18px;
+      margin-top: 50px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <div class="certificate-content">
+      <h1 class="certificate-title">Certificate of Achievement</h1>
+      <p class="certificate-details">This certificate is presented to</p>
+      <h2 class="certificate-name"><%=name%></h2>
+      <p class="certificate-details">For successfully meeting the target and raising funds in</p>
+      <p class="certificate-details"><%=ename%></p>
+      <p class="certificate-details">Date: <%=date%></p>
+      <p class="certificate-details">Location:<%=location%> </p>
+      <p class="certificate-signature">Authorized Signature</p>
+      <p class="certificate-issuer">Issued by MRPU Foundation</p>
+    </div>
+  </div>
+</body>
+</html>
