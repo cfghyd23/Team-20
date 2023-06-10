@@ -13,7 +13,7 @@ const onFormSubmit = async(obj)=>{
   let res =await axios.post("http://localhost:3000/user/createuser",obj)
   let msg = res.data.message
   if(msg == "success"){
-    navigate('/login')
+    alert("success")
   }
   else{
     const er = document.getElementsByClassName("error")[0]

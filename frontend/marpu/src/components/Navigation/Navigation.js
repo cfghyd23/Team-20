@@ -18,7 +18,7 @@ function Navigation() {
   const navigate=useNavigate()
   let logout = ()=>{
     // alert('hello')
-    navigate('/home')
+    navigate('/home') 
     // alert('bye')
     localStorage.clear()
     dispatch(whenLogout())
@@ -49,6 +49,7 @@ function Navigation() {
             <Nav className="ms-auto">
             <NavLink className="m-2 text-light text-decoration-none" to="/userDashboard">{userData.username}</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" to="/home">Home</NavLink>
+            <NavLink className="m-2 text-light text-decoration-none" to="/regintern">Internship Registration</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" onClick={logout}>logout</NavLink>
             <NavLink className="m-2 text-light text-decoration-none">change password</NavLink>
             </Nav>

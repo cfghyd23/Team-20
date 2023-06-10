@@ -18,12 +18,18 @@ const onformSubmit = (dataObj)=>{
 
 }
 if(success === true){
+     alert("logined successfully")
   navigate('/userDashboard')
 }
+// else{
+//     let err = document.getElementsByClassName("error-message")[0]
+//     err.innerHTML += 
+// }
 
 return (
 
     <div>
+        <div className="error-message"></div>
       <form action="" onSubmit={handleSubmit(onformSubmit)}>
         username: <input type="text" placeholder='enter user name' {...register("username",{required:true})} />
         {errors.username && <p className='text-danger'> username is required</p> }

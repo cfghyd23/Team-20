@@ -1,4 +1,4 @@
-post http://localhost:3000/user/login
+post http://localhost:3000/intern/addIntern
 Content-Type: application/json
 
 {

@@ -15,16 +15,20 @@ mclient.connect(DBURL)
 .then((client)=>{
     const dataBaseObject = client.db("JPMC")
     const userDataObject =  dataBaseObject.collection("userData")
+    const internsDataObject =  dataBaseObject.collection("interns")
     app.set("userDataObject",userDataObject)
+    app.set("internsDataObject",internsDataObject)
 
 })
 .catch(error =>console.log(error))
 
 
 const userApp = require('./APIs/userData')
+const internsApp = require('./APIs/interns')
 
-
+// APIs
 app.use("/user",userApp)
+app.use("/intern/",internsApp)
 
 app.use((request,response,next)=>{
     response.send({error:`path ${request.url} is invalid`})
