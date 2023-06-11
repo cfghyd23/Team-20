@@ -1,42 +1,45 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
+const exp = require("express")
+const app = exp()
+app.use(exp.json())
+const path = require("path")
+const cors=require('cors')
 
-const app = express();
-app.use(express.json());
+app.use(cors())
 
-// Configure Nodemailer with your email service provider details
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'akshitmehrotra28@gmail.com',
-    pass: 'akshitmvn',
-  },
-});
-app.get('/', async (req, res) => {
-  res.send('hi')
-});
-// Define an endpoint to handle email sending
-app.post('/', async (req, res) => {
-  const { recipientEmail, subject, message } = req.body;
 
-  try {
-    // Send the email
-    await transporter.sendMail({
-      from: 'akshitmehrotra28@gmail.com',
-      to: recipientEmail,
-      subject,
-      text: message,
-    });
+// mongo db importing and connecting
+const mclient = require("mongodb").MongoClient
+const DBURL = "mongodb+srv://Srikarmara20:Srikarmara20@me.mlmyhmg.mongodb.net/"
 
-    console.log('Email sent successfully');
-    res.status(200).json({ message: 'Email sent successfully' });
-  } catch (error) {
-    console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Error sending email' });
-  }
-});
+mclient.connect(DBURL)
+.then((client)=>{
+    const dataBaseObject = client.db("JPMC")
+    const userDataObject =  dataBaseObject.collection("userData")
+    const internsDataObject =  dataBaseObject.collection("interns")
+    app.set("userDataObject",userDataObject)
+    app.set("internsDataObject",internsDataObject)
 
-// Start the server
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});
+})
+.catch(error =>console.log(error))
+
+
+const userApp = require('./APIs/userData')
+const internsApp = require('./APIs/interns')
+
+// APIs
+app.use("/user",userApp)
+app.use("/intern/",internsApp)
+
+app.use((request,response,next)=>{
+    response.send({error:`path ${request.url} is invalid`})
+})
+
+
+
+app.use((error,request,response,next)=>{
+    response.send({message:"error occured",reason:`${error.message}`})
+})
+
+
+
+app.listen(3000,()=> console.log("port is listening"))

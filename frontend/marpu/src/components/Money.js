@@ -6,7 +6,7 @@ const Money = () => {
 
   return (
     <div class style={{ width: 200,height:200}}>
-      <CircularProgressbar value={percentage} text={`₹${percentage}%`} />
+      {/* <CircularProgressbar value={percentage} text={`₹${percentage}%`} /> */}
       <div>Money Raised</div>
     </div>
   );

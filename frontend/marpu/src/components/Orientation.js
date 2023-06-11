@@ -1,5 +1,4 @@
 import React from 'react'
-import { Player } from 'video-react'
 const Orientation = () => {
   return (
     <div style={{ width: '100vw', height: '90vh' }} className='flex justify-center items-center'>

@@ -9,13 +9,12 @@ const DashboardNav = () => {
 
     <nav className="main-nav ">
       <ul className="main-nav-list">
-        <li><a className="main-nav-link" href="#how">How it works</a></li>
-        <li><a className="main-nav-link" href="#meals">Meals</a></li>
+        <li><a className="main-nav-link" href="#how">Orientation</a></li>
+        <li><a className="main-nav-link" href="#meals">User Data</a></li>
         <li>
-          <a className="main-nav-link" href="#testimonials">Testimonials</a>
+          <a className="main-nav-link" href="#testimonials">LogOut</a>
         </li>
-        <li><a className="main-nav-link" href="#pricing">Pricing</a></li>
-        <li><a className="main-nav-link nav-cta" href="#cta">Try for free</a></li>
+        <li><a className="main-nav-link nav-cta" href="#cta">Fund Raised</a></li>
       </ul>
     </nav>
 
