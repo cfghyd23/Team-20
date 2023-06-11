@@ -44,13 +44,11 @@ function Navigation() {
             <NavLink className="m-2 text-light text-decoration-none" to="/signup">sign up</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" to="/login">login</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" to="contact">contact us</NavLink>
-            
-
-
+            <NavLink className="m-2 text-light text-decoration-none" to="/admin">Admin</NavLink>
           </Nav>
             :
             <Nav className="ms-auto">
-            <NavLink className="m-2 text-light text-decoration-none" to="/userDashboard">{userData.username}</NavLink>
+            <NavLink className="m-2 text-light text-decoration-none" to="/userDashboard">{userData.username}/userDashboard</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" to="/home">Home</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" to="/regintern">Internship Registration</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" onClick={logout}>logout</NavLink>

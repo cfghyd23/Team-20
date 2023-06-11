@@ -9,8 +9,8 @@ import Navigation from './components/Navigation/Navigation';
 // import InternReg from './components/Intern/InternReg'
 // import RegIntern from './components/Intern/InternReg'
 import InternReg from './components/InternReg/InternReg';
+import Admin from './components/Admin';
 import About from './components/About/About';
-
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <Route path='signup' element={<Signup/>}/>
         <Route path='login' element={<Login/>}/>
         <Route path='userDashboard' element={<UserDashboard/>} />
+        <Route path='admin' element={<Admin/>} />
      
       {/* </Switch> */}
       </Routes>

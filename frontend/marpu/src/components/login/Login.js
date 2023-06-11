@@ -28,14 +28,30 @@ if(success === true){
 
 return (
 
-    <div>
-        <div className="error-message"></div>
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-400 bg-opacity-50">
       <form action="" onSubmit={handleSubmit(onformSubmit)}>
-        username: <input type="text" placeholder='enter user name' {...register("username",{required:true})} />
-        {errors.username && <p className='text-danger'> username is required</p> }
-        password: <input type="text" placeholder='enter user name' {...register("password",{required:true})} />
+      <label
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-gray-900"
+                >
+                  Email
+                </label> <input type="text" placeholder='enter user name' {...register("username",{required:true})} />
+        {errors.username && <p className='text-xl font-bold'> username is required</p> }
+        <label
+                  htmlFor="password"
+                  className="block mb-2 text-sm font-medium text-gray-900"
+                >
+                  Password
+                </label> <input type="text" placeholder='enter password' {...register("password",{required:true})} />
+                <br />
+                <br />
         {errors.password && <p className='text-danger'> password is required</p> }
-        <button type='submit'> login</button>
+        <button
+                type="submit"
+                className="bg-orange-500 text-white rounded-md px-4 py-2"
+              >
+                Login
+              </button>
       </form>
     </div>
   )
