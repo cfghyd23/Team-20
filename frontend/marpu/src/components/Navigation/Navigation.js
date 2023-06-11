@@ -40,9 +40,12 @@ function Navigation() {
             ?
             <Nav className="ms-auto">
             <NavLink className="m-2 text-light text-decoration-none" to="/home">Home</NavLink>
+            <NavLink className="m-2 text-light text-decoration-none" to="about">About</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" to="/signup">sign up</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" to="/login">login</NavLink>
             <NavLink className="m-2 text-light text-decoration-none" to="contact">contact us</NavLink>
+            
+
 
           </Nav>
             :

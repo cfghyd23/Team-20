@@ -1,29 +1,30 @@
 import React from 'react'
 import './Home.css'
+import {Button} from 'react-bootstrap'
+import {useNavigate} from 'react-router-dom'
+
 function Home() {
+  let navigate = useNavigate()
+  let navi = ()=>{
+    navigate('/about')
+  }
   return (
     <div>
-      <section id="home" data-stellar-background-ratio="0.5">
-        <div className="overlay"></div>
-        <div className="container">
-          <div className="row">
-
-            <div className="col-md-6 col-sm-12">
-              <div className="home-info">
-                <h1>Individually, we are drops. Together, we are an ocean of change.<br /> Let's join hands and create ripples of hope, compassion, and empowerment that will transform our world.
-                </h1>
-                <a href="#about" className="btn section-btn smoothScroll">Know us</a>
-
-
-              </div>
-            </div>
-
-
-
-          </div>
-        </div>
-      </section>
-
+      <div className='hero-container'>
+      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <h1>ADVENTURE AWAITS</h1>
+      <p>What are you waiting for?</p>
+      <div className='hero-btns'>
+        <Button
+          className='btns'
+          buttonStyle='btn--primary'
+          buttonSize='btn--large'
+          onClick={navi}
+        >
+          About Us<i className='far fa-play-circle' />
+        </Button>
+      </div>
+    </div>
     </div>
   )
 }

@@ -1,0 +1,40 @@
+#about {
+    background-image: url('../../images/about-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+    text-align: left;
+    padding-bottom: 0;
+    font-size: 18px;
+  }
+
+  #about .about-info:first-child {
+    margin-right: 40px;
+  }
+
+  .about-info .section-title {
+    margin: 40px 0 40px 0;
+  }
+
+  .about-info {
+    margin-top: 60px;
+  }
+
+  .skill-thumb strong {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .skill-thumb .progress {
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: none;
+    height: 3px;
+    margin-bottom: 25px;
+  }
+
+  .skill-thumb .progress-bar {
+    background: #1f1f1f;
+    box-shadow: none;
+  }
+

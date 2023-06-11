@@ -9,6 +9,7 @@ import Navigation from './components/Navigation/Navigation';
 // import InternReg from './components/Intern/InternReg'
 // import RegIntern from './components/Intern/InternReg'
 import InternReg from './components/InternReg/InternReg';
+import About from './components/About/About';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   <Navigation/>
 
   <Routes>
+    <Route path='about' element={<About/>}/>
   <Route path='regintern' element={<InternReg/>} />
         <Route path='' element={<Home/>}/>
         <Route path='home' element={<Home/>}/>
