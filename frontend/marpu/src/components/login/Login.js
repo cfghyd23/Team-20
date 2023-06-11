@@ -28,21 +28,22 @@ if(success === true){
 
 return (
 
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-400 bg-opacity-50">
+    <div className="text-xl h-screen flex items-center justify-center bg-gray-400 bg-opacity-50">
       <form action="" onSubmit={handleSubmit(onformSubmit)}>
       <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900"
+                  htmlFor="username"
+                  className="my-6 text-xl block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Email
+                  username
                 </label> <input type="text" placeholder='enter user name' {...register("username",{required:true})} />
         {errors.username && <p className='text-xl font-bold'> username is required</p> }
         <label
                   htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-gray-900"
+                  className="my-6 text-xl block mb-2 text-sm font-medium text-gray-900"
+                  
                 >
                   Password
-                </label> <input type="text" placeholder='enter password' {...register("password",{required:true})} />
+                </label> <input type="password" placeholder='enter password' {...register("password",{required:true})} />
                 <br />
                 <br />
         {errors.password && <p className='text-danger'> password is required</p> }

@@ -79,6 +79,27 @@ const Admin = () => {
           Submit
         </button>
       </form>
+      <table className="min-w-full divide-y divide-gray-200 mt-2lo">
+      <thead className="bg-gray-50">
+        <tr>
+          <th className="py-2 px-4">Username</th>
+          <th className="py-2 px-4">Amount of Money</th>
+          <th className="py-2 px-4">Donor Name</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white divide-y divide-gray-200">
+        <tr>
+          <td className="py-2 px-4">Akshit</td>
+          <td className="py-2 px-4">4000</td>
+          <td className="py-2 px-4">Virat</td>
+        </tr>
+        <tr>
+          <td className="py-2 px-4">Archie</td>
+          <td className="py-2 px-4">2000</td>
+          <td className="py-2 px-4">Rohit</td>
+        </tr>
+      </tbody>
+    </table>
     </div>
   );
 };

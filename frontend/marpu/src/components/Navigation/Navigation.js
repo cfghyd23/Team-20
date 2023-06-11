@@ -32,7 +32,7 @@ function Navigation() {
     <div className='navi-main'>
          <Navbar bg="dark" variant='dark' expand="lg">
       <Container>
-        <Navbar.Brand to="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand to="#home">Marpu</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           {

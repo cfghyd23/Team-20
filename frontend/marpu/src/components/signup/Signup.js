@@ -28,8 +28,8 @@ const onFormSubmit = async(obj)=>{
       <form  onSubmit={handleSubmit(onFormSubmit)}   className='container mx-auto p-5'>
         <p className="error"></p>
         <div >
-          <label for="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-6">Username</label>
-          <input type="text" id="inputUser" placeholder="username" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          <label for="username" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black mt-6">Username</label>
+          <input type="text" id="inputUser" placeholder="username" className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             
             
           {...register("username",{required:true})} />
@@ -37,7 +37,7 @@ const onFormSubmit = async(obj)=>{
         </div>
 
         <div >
-          <label htmlFor="exampleInputEmail1" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-6">Email address</label>
+          <label htmlFor="exampleInputEmail1" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black mt-6">Email address</label>
           <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
            {...register("email",{required:true})} />
            {errors.email && <p className='text-danger'>*field is required</p> }
@@ -47,7 +47,7 @@ const onFormSubmit = async(obj)=>{
           <label htmlFor="exampleInputPassword1">Password</label>
           <input type="password" 
             id="password"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
              placeholder="Password"
            {...register("password",{required:true})} />
            {errors.password && <p className='text-danger'>*field is required</p> }
@@ -55,13 +55,13 @@ const onFormSubmit = async(obj)=>{
 
         {/* Full name field */}
         <div className="mb-6">
-          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Full name
           </label>
           <input
             type="text"
             id="fullname"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             placeholder="John Doe"
             required
             {...register('fullname', { required: true })}
@@ -71,7 +71,7 @@ const onFormSubmit = async(obj)=>{
 
         {/* Gender field */}
         <div className="mb-6">
-          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Gender
           </label>
           <input type="radio" id="male" name="gender" value="male" {...register('gender')} />
@@ -90,13 +90,13 @@ const onFormSubmit = async(obj)=>{
 
         {/* Age field */}
         <div className="mb-6">
-          <label htmlFor="date" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="date" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Date
           </label>
           <input
             type="date"
             id="date"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             required
             {...register('age', { required: true })}
           />
@@ -105,12 +105,12 @@ const onFormSubmit = async(obj)=>{
 
         {/* Address field */}
         <div className="mb-6">
-          <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Address
           </label>
           <textarea
             id="address"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             required
             {...register('address', { required: true })}
           />
@@ -119,13 +119,13 @@ const onFormSubmit = async(obj)=>{
 
         {/* Phone number field */}
         <div className="mb-6">
-          <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Phone number
           </label>
           <input
             type="tel"
             id="phone"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             required
             {...register('phone', { required: true })}
           />
@@ -134,13 +134,13 @@ const onFormSubmit = async(obj)=>{
 
          {/* State field */}
          <div className="mb-6">
-          <label htmlFor="state" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="state" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             State
           </label>
           <input
             type="text"
             id="state"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             required
             {...register('state', { required: true })}
           />
@@ -149,13 +149,13 @@ const onFormSubmit = async(obj)=>{
 
         {/* City field */}
         <div className="mb-6">
-          <label htmlFor="city" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="city" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             City
           </label>
           <input
             type="text"
             id="city"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             required
             {...register('city', { required: true })}
           />
@@ -164,13 +164,13 @@ const onFormSubmit = async(obj)=>{
 
         {/* Address field */}
         <div className="mb-6">
-          <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Address
           </label>
           <input
             type="text"
             id="address"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             required
             {...register('address', { required: true })}
           />
@@ -179,13 +179,13 @@ const onFormSubmit = async(obj)=>{
 
         {/* Current College/School/University field */}
         <div className="mb-6">
-          <label htmlFor="college" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="college" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Current College/School/University
           </label>
           <input
             type="text"
             id="college"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             required
             {...register('college', { required: true })}
           />
@@ -194,44 +194,23 @@ const onFormSubmit = async(obj)=>{
 
         {/* Education field */}
         <div className="mb-6">
-          <label htmlFor="education" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="education" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Education
           </label>
           <input
             type="text"
             id="education"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             required
             {...register('education', { required: true })}
           />
           {errors.education && <span>Education is required</span>}
         </div>
 
-        {/* Internship Type field */}
-        <div className="mb-6">
-          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-            Internship Type
-          </label>
-          <input type="radio" id="inPerson" name="internshipType" value="inPerson" {...register('internshipType')} />
-          <label htmlFor="inPerson">In-Person</label>
-          <br />
-          <input type="radio" id="virtual" name="internshipType" value="virtual" {...register('internshipType')} />
-          <label htmlFor="virtual">Virtual</label>
-          <br />
-        </div>
-
-        {/* Internship Role field */}
-        <div className="mb-6">
-          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-            Internship Role
-          </label>
-          <input type="radio" id="fundraiser" name="internshipRole" value="fundraiser" {...register('internshipRole')} />
-          <label htmlFor="fundraiser">FundRaiser Intern</label>
-          <br />
-        </div>
+   
         {/* Event field */}
         <div className="mb-6">
-          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Gender
           </label>
           <input type="radio" id="male" name="gender" value="water saving" {...register('gender')} />
@@ -249,13 +228,13 @@ const onFormSubmit = async(obj)=>{
         </div>
         {/* Your Introduction field */}
         <div className="mb-6">
-          <label htmlFor="introduction" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label htmlFor="introduction" className="block mb-2 text-sm font-medium text-gray-400 dark:text-black">
             Your Introduction
           </label>
           <input
             type="text"
             id="introduction"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border border-gray-300 text-gray-400 text-sm rounded-lg focus:text-gray-400 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-400 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:text-gray-400 dark:focus:border-blue-500"
             placeholder="Tell us something about you"
             required
             {...register('introduction', { required: true })}
